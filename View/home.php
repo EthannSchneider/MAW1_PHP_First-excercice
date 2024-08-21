@@ -23,6 +23,7 @@ ob_start();
             <th scope="col">PHP OO</th>
             <th scope="col">SQL</th>
             <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -36,14 +37,14 @@ ob_start();
             echo "<td> <input name='php_base_level' value='".$user['php_base_level']."'></td>";
             echo "<td> <input name='php_oo_level' value='".$user['php_oo_level']."'></td>";
             echo "<td> <input name='sql_level' value='".$user['sql_level']."'></td>";
-            echo "<td>
-                <button type='submit'>edit</button>
-                <form action='/?action=delete_user' method='post'>
+            echo "<td><button type='submit'>edit</button></td>";
+            echo "</form>";
+            echo "<td>";
+            echo "<form action='/?action=delete_user' method='post'>
                     <input type='hidden' name='name' value='".$user['username']."'>
                     <button type='submit'>delete</button>
-                </form>
-            </td>";
-            echo "</form>";
+                </form>";
+            echo "</td>";
             echo "</tr>";
         }
         ?>
