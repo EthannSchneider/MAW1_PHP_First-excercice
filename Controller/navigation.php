@@ -9,4 +9,5 @@ function home() {
 
 function lost() {
     require 'View/lost.php';
+    http_response_code(404);
 }

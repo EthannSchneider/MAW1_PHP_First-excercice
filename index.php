@@ -5,25 +5,23 @@ session_start();
 require 'Controller/navigation.php';
 require 'Controller/users_controller.php';
 
-if (isset($_GET['action'])) {
-    $action = $_GET['action'];
+$redirect_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
-    switch ($action) {
-        case 'home':
-            home();
-            break;
-        case 'add_user':
-            add_user();
-            break;
-        case 'delete_user':
-            delete_user();
-            break;
-        case 'edit_user':
-            edit_user();
-            break;
-        default:
-            lost();
-    }
-} else {
-    home();
+$redirect_uri = explode('?', $redirect_uri)[0];
+
+switch ($redirect_uri) {
+    case '/':
+        home();
+        break;
+    case '/api/users':
+        add_user();
+        break;
+    case '/api/users/delete':
+        delete_user();
+        break;
+    case '/api/users/edit':
+        edit_user();
+        break;
+    default:
+        lost();
 }

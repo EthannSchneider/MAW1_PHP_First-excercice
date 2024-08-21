@@ -6,11 +6,10 @@ ob_start();
 
 <div class="d-flex justify-content-around">
     <h1>Bienvenue sur mon site</h1>
-    <form action="/?action=add_user" method="post" class="d-flex">
+    <form action="/api/users" method="post" class="d-flex">
         <input type="text" name="name">
         <button type="submit">add</button>
     </form>
-    
 </div>
 
 
@@ -30,7 +29,7 @@ ob_start();
         <?php 
         foreach ($users as $user) {
             echo "<tr>";
-            echo "<form action='/?action=edit_user' method='post'>";
+            echo "<form action='/api/users/edit' method='post'>";
             echo "<input type='hidden' name='name' value='".$user['username']."'>";
             echo "<th scope='row'>".$user['username']."</th>";
             echo "<td> <input type='number' name='html_level' value='".$user['html_level']."'></td>";
@@ -40,7 +39,7 @@ ob_start();
             echo "<td><button type='submit'>edit</button></td>";
             echo "</form>";
             echo "<td>";
-            echo "<form action='/?action=delete_user' method='post'>
+            echo "<form action='/api/users/delete' method='post'>
                     <input type='hidden' name='name' value='".$user['username']."'>
                     <button type='submit'>delete</button>
                 </form>";
