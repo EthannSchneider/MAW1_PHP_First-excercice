@@ -52,5 +52,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-require "View/gabarit.php";
+require "Views/gabarit.php";
 ?>

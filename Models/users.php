@@ -1,6 +1,6 @@
 <?php 
 
-require 'Model/database_sqlite3.php';
+require 'Models/database_sqlite3.php';
 
 class Users {
     private Databasesqlite3 $databases;

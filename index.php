@@ -2,8 +2,8 @@
 
 session_start();
 
-require 'Controller/navigation.php';
-require 'Controller/users_controller.php';
+require 'Controllers/navigation.php';
+require 'Controllers/users_controller.php';
 
 $redirect_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
