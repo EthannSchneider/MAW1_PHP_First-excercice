@@ -1,0 +1,17 @@
+{
+    "name": "ethannschneider/maw1_php_first-excercice",
+    "require": {
+        "phpunit/phpunit": "^11.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ethannschneider\\Maw1PhpFirstExcercice\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ethann Schneider",
+            "email": "ethann@shkermit.ch"
+        }
+    ]
+}
